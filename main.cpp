@@ -2,11 +2,13 @@
 #include <QQmlApplicationEngine>
 #include "httpmgr.h"
 #include "global.h"
+#include <QIcon>
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+    app.setWindowIcon(QIcon(":/src/images/logo.png"));
     qmlRegisterSingletonType<HttpMgr>("com.example.singletons", 1, 0, "HttpMgr",
                                       [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
                                           Q_UNUSED(engine)

@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(QChatter VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick Network)
 
@@ -17,11 +18,10 @@ qt_add_qml_module(appQChatter
     VERSION 1.0
     QML_FILES
         Main.qml
-        QML_FILES
-        QML_FILES
         SOURCES Singleton.h
         SOURCES httpmgr.h httpmgr.cpp
         SOURCES global.h
+        RESOURCES rc.qrc
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
