@@ -80,9 +80,9 @@ signals:
     void sig_reg_mod_finish(Global::ReqId id, QString res, Global::ErrorCodes err);
 
 private:
-    friend class Singleton<HttpMgr>;  // 允许Singleton访问私有构造函数
-    HttpMgr();                        // 私有构造函数，确保单例模式
-    QNetworkAccessManager _manager;    // Qt网络访问管理器实例
+    friend class Singleton<HttpMgr>; // 允许Singleton访问私有构造函数
+    HttpMgr();                       // 私有构造函数，确保单例模式
+    QNetworkAccessManager _manager;  // Qt网络访问管理器实例
 };
 
 #endif // HTTPMGR_H

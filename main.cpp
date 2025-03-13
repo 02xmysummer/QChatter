@@ -3,7 +3,7 @@
 #include <QQmlApplicationEngine>
 #include "global.h"
 #include "httpmgr.h"
-
+#include "framelesswindow.h"
 /**
  * @brief 程序入口函数
  * 
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     // 创建QML引擎实例
     QQmlApplicationEngine engine;
-    
+
     // 设置应用程序窗口图标
     app.setWindowIcon(QIcon(":/src/images/logo.png"));
 
@@ -29,12 +29,14 @@ int main(int argc, char *argv[])
                                       [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
                                           Q_UNUSED(engine)
                                           Q_UNUSED(scriptEngine)
-                                          return HttpMgr::GetInstance()
-                                              .get(); // 返回HttpMgr单例实例
+                                          return HttpMgr::GetInstance().get(); // 返回HttpMgr单例实例
                                       });
 
     // 注册Global类型到QML环境，使得枚举值可在QML中使用
     qmlRegisterType<Global>("com.example.global", 1, 0, "Global");
+
+    // 注册FramelessWindow类型到QML环境，用于无边框窗口
+    qmlRegisterType<FramelessWindow>("an.io", 1, 0, "FramelessWindow");
 
     // 连接QML引擎的对象创建失败信号，发生错误时退出应用
     QObject::connect(

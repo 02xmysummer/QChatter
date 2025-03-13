@@ -20,13 +20,13 @@ class Singleton
 protected:
     // 默认构造函数，protected访问级别确保只有子类可以实例化
     Singleton() = default;
-    
+
     // 删除拷贝构造函数，防止实例被复制
     Singleton(const Singleton<T> &) = delete;
-    
+
     // 删除赋值运算符，防止实例被赋值
     Singleton &operator=(const Singleton<T> &st) = delete;
-    
+
     // 静态成员变量，存储唯一实例的智能指针
     static std::shared_ptr<T> _instance;
 

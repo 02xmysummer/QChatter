@@ -18,10 +18,19 @@ qt_add_qml_module(appQChatter
     VERSION 1.0
     QML_FILES
         Main.qml
-        SOURCES Singleton.h
-        SOURCES httpmgr.h httpmgr.cpp
-        SOURCES global.h
-        RESOURCES rc.qrc
+        FramelessWindow.qml
+        LoginPage.qml
+        RegisterPage.qml
+        RoundImage.qml
+        ForgetPasswordPage.qml
+    SOURCES
+        Singleton.h
+        httpmgr.h
+        httpmgr.cpp
+        global.h
+        framelesswindow.h
+        framelesswindow.cpp
+    RESOURCES rc.qrc
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

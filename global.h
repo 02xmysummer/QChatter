@@ -20,10 +20,10 @@ public:
      * 用于标识不同类型的HTTP请求
      */
     enum ReqId {
-        ID_GET_VARIFY_CODE = 1001,  ///< 获取验证码的请求ID
-        ID_REG_USER = 1002,         ///< 注册用户的请求ID
+        ID_GET_VARIFY_CODE = 1001, ///< 获取验证码的请求ID
+        ID_REG_USER = 1002,        ///< 注册用户的请求ID
     };
-    Q_ENUM(ReqId)  // 使枚举在QML中可用
+    Q_ENUM(ReqId) // 使枚举在QML中可用
 
     /**
      * @brief 错误码枚举
@@ -34,16 +34,16 @@ public:
         ERR_JSON = 1,    ///< JSON解析失败
         ERR_NETWORK = 2, ///< 网络错误
     };
-    Q_ENUM(ErrorCodes)  // 使枚举在QML中可用
+    Q_ENUM(ErrorCodes) // 使枚举在QML中可用
 
     /**
      * @brief 模块枚举
      * 定义了系统中的不同功能模块
      */
     enum Modules {
-        REGISTERMOD = 0,  ///< 注册模块
+        REGISTERMOD = 0, ///< 注册模块
     };
-    Q_ENUM(Modules)  // 使枚举在QML中可用
+    Q_ENUM(Modules) // 使枚举在QML中可用
 };
 
 #endif // GLOBAL_H
