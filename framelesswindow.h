@@ -10,18 +10,26 @@ class FramelessWindow : public QQuickWindow
 {
     Q_OBJECT
 
-
 public:
-    enum MousePosition{
-        TOPLEFT = 1, TOP, TOPRIGHT, LEFT, RIGHT, BOTTOMLEFT, BOTTOM, BOTTOMRIGHT, NORMAL
+    enum MousePosition {
+        TOPLEFT = 1,
+        TOP,
+        TOPRIGHT,
+        LEFT,
+        RIGHT,
+        BOTTOMLEFT,
+        BOTTOM,
+        BOTTOMRIGHT,
+        NORMAL
     };
-    Q_PROPERTY(MousePosition mouse_pos READ getMouse_pos WRITE setMouse_pos NOTIFY mouse_posChanged FINAL)
+    Q_PROPERTY(
+        MousePosition mouse_pos READ getMouse_pos WRITE setMouse_pos NOTIFY mouse_posChanged FINAL)
     Q_PROPERTY(bool is_resize READ getIs_resize WRITE setIs_resize NOTIFY is_resizeChanged FINAL)
 
     Q_ENUM(MousePosition);
     explicit FramelessWindow(QWindow *parent = nullptr);
 
-    ~FramelessWindow()  = default;
+    ~FramelessWindow() = default;
     MousePosition getMouse_pos() const;
     void setMouse_pos(MousePosition newMouse_pos);
 
@@ -35,9 +43,9 @@ signals:
     void is_resizeChanged();
 
 protected:
-    void mousePressEvent(QMouseEvent* event);
-    void mouseReleaseEvent(QMouseEvent* event);
-    void mouseMoveEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
 
 private:
     void setWindowGeometry(const QPointF &pos);
@@ -59,7 +67,6 @@ private:
 
     //窗口大小是否可以调整
     bool is_resize = true;
-
 };
 
 #endif // FRAMELESSWINDOW_H

@@ -4,5 +4,13 @@
         <file>src/images/pinTop.png</file>
         <file>src/images/QpinTop.png</file>
         <file>src/images/avatar.jpg</file>
+        <file>src/images/chat.png</file>
+        <file>src/images/chat_active.png</file>
+        <file>src/images/contacts.png</file>
+        <file>src/images/contacts_active.png</file>
+        <file>src/images/folder.png</file>
+        <file>src/images/folder_active.png</file>
+        <file>src/images/search.png</file>
+        <file>src/images/settings.png</file>
     </qresource>
 </RCC>

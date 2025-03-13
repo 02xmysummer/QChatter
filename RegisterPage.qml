@@ -10,12 +10,13 @@ import QtQuick.Controls.Material
  * @date       2025/03/13
  * @history
  *****************************************************************************/
-Rectangle {
+Rectangle{
     id: registerPage
     width: 280
     height: 350
-    color: "#f5f5f5"
     signal switchLogin
+
+    color: "#f5f5f5"
 
     Column {
         anchors.fill: parent

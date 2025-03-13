@@ -5,10 +5,7 @@ Image {
     id: image
     property alias radius: maskRect.radius
     layer.enabled: true
-    layer.effect: MultiEffect {
-        maskEnabled: true
-        maskSource: maskRect
-    }
+
     Rectangle {
         id:maskRect
         anchors.fill: parent
@@ -16,5 +13,9 @@ Image {
         visible: false
     }
 
+    layer.effect: MultiEffect {
+        maskEnabled: true
+        maskSource: maskRect
+    }
 
 }

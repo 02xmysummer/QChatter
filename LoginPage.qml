@@ -20,6 +20,7 @@ Rectangle {
 
     signal switchRegister
     signal switchForgetPassword
+    signal login
     Column {
         anchors.fill: parent
         spacing: 20
@@ -95,6 +96,10 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 16
+            }
+
+            onClicked: {
+                loginPage.login()
             }
         }
 
