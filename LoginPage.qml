@@ -1,7 +1,8 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Controls.Material
-
+import io.httpmgr 1.0
+import io.global 1.0
 
 /******************************************************************************
  *
@@ -21,6 +22,33 @@ Rectangle {
     signal switchRegister
     signal switchForgetPassword
     signal login
+
+    Connections {
+        target: HttpMgr
+
+        function onSig_login_mod_finish(id, res, errorcode) {
+            console.log("id is ", id)
+            console.log("res is ", res)
+            console.log("errorcode is ", errorcode)
+            if(errorcode !== Global.SUCCESS) {
+                console.log("网络请求错误")
+                return
+            }
+
+            if(id === Global.ID_LOGIN_USER) {
+                // 解析返回的 JSON 字符串
+                let response = JSON.parse(res)
+                // 检查服务器返回的错误码
+                if(response.error === 0) {
+                    console.log("登录成功")
+                    loginPage.login()
+                } else {
+                    console.log("登录失败：服务器返回错误")
+                }
+            }
+        }
+    }
+
     Column {
         anchors.fill: parent
         spacing: 20
@@ -34,9 +62,9 @@ Rectangle {
             anchors.horizontalCenter:parent.horizontalCenter
             source: "qrc:/src/images/avatar.jpg"
         }
-        //邮箱
+        //用户名
         TextField {
-            id: emailInput
+            id: usernameInput
             width: parent.width - 34
             height: 30
             placeholderText: "请输入邮箱"
@@ -44,7 +72,7 @@ Rectangle {
             background: Rectangle {
                 radius: 4
                 border.width: 1
-                border.color: emailInput.focus ? "#2196F3" : "#e0e0e0"
+                border.color: usernameInput.focus ? "#2196F3" : "#e0e0e0"
             }
         }
         //密码
@@ -99,7 +127,12 @@ Rectangle {
             }
 
             onClicked: {
-                loginPage.login()
+                var json_obj = {
+                    "user": usernameInput.text,
+                    "passwd": passwordInput.text
+                }
+                HttpMgr.PostHttpReq("http://192.168.56.101:8080/user_login", json_obj, Global.ID_LOGIN_USER, Global.LOGINMOD)
+
             }
         }
 

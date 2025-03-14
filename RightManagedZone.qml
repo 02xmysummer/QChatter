@@ -7,15 +7,35 @@ Rectangle {
         anchors.fill: rightManagedZone
         spacing: 0
 
-        Rectangle {
+        Item {
             Layout.fillWidth: true
             height: 60
-            color: "transparent"
+            Rectangle {
+                id:topRect
+                width: parent.width
+                height: 30
+                color: "transparent"
+
+            }
+            Rectangle {
+                width: parent.width
+                height: 30
+                color: "#F5F5F5"
+                anchors.top:topRect.bottom
+            }
         }
+
+
         Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
             color:"red"
+        }
+
+        Rectangle {
+            Layout.fillWidth: true
+            height: 80
+            color: "blue"
         }
     }
 }

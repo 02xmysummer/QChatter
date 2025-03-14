@@ -22,6 +22,8 @@ public:
     enum ReqId {
         ID_GET_VARIFY_CODE = 1001, ///< 获取验证码的请求ID
         ID_REG_USER = 1002,        ///< 注册用户的请求ID
+        ID_RESET_PWD = 1003,       ///< 重置密码
+        ID_LOGIN_USER = 1004,      ///< 用户登录
     };
     Q_ENUM(ReqId) // 使枚举在QML中可用
 
@@ -42,6 +44,8 @@ public:
      */
     enum Modules {
         REGISTERMOD = 0, ///< 注册模块
+        RESETMOD = 1,   ///< 重置密码模块
+        LOGINMOD = 2,   ///< 登录模块
     };
     Q_ENUM(Modules) // 使枚举在QML中可用
 };

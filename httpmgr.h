@@ -79,6 +79,17 @@ signals:
      */
     void sig_reg_mod_finish(Global::ReqId id, QString res, Global::ErrorCodes err);
 
+    /**
+     * @brief 重置密码模块完成信号
+     * 专门用于处理重置密码请求完成事件
+     */
+    void sig_reset_mod_finish(Global::ReqId id, QString res, Global::ErrorCodes err);
+    /**
+     * @brief 登录模块完成信号
+     * 专门用于登录请求完成事件
+     */
+    void sig_login_mod_finish(Global::ReqId id, QString res, Global::ErrorCodes err);
+
 private:
     friend class Singleton<HttpMgr>; // 允许Singleton访问私有构造函数
     HttpMgr();                       // 私有构造函数，确保单例模式

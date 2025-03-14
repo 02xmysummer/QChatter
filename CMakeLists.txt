@@ -52,7 +52,8 @@ set_target_properties(appQChatter PROPERTIES
 )
 
 target_link_libraries(appQChatter
-    PRIVATE Qt6::Quick Qt6::Network
+    PRIVATE Qt6::Quick
+        Qt6::Network
 )
 
 include(GNUInstallDirs)

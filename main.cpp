@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     app.setWindowIcon(QIcon(":/src/images/logo.png"));
 
     // 注册HttpMgr单例到QML环境
-    qmlRegisterSingletonType<HttpMgr>("com.example.singletons",
+    qmlRegisterSingletonType<HttpMgr>("io.httpmgr",
                                       1,
                                       0,
                                       "HttpMgr",
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
                                       });
 
     // 注册Global类型到QML环境，使得枚举值可在QML中使用
-    qmlRegisterType<Global>("com.example.global", 1, 0, "Global");
+    qmlRegisterType<Global>("io.global", 1, 0, "Global");
 
     // 注册FramelessWindow类型到QML环境，用于无边框窗口
     qmlRegisterType<FramelessWindow>("an.io", 1, 0, "FramelessWindow");

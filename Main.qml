@@ -58,7 +58,7 @@ FramelessWindow {
                 window.is_resize = true
                 window.minBntShow = true
                 window.maxBntShow = true
-                window.minimumWidth = 700
+                window.minimumWidth = 670
                 window.minimumHeight = 500
                 loader.y = 0
                 // loader.item.width = window.width

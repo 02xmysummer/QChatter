@@ -16,7 +16,7 @@ Rectangle {
             id:avatarButton
             property int icon_width:5 * leftNavBar.width / 6
             Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: 10
+            Layout.topMargin: 30
             Layout.preferredWidth: icon_width
             Layout.preferredHeight: icon_width
             icon.source: "qrc:/src/images/avatar.jpg"
