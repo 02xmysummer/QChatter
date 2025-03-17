@@ -5,9 +5,7 @@ import QtQuick.Layouts
 Rectangle {
     id: leftNavBar
     property int currentIndex: 0
-    property var navBarList: [
-        "ChatList.qml", "UserList.qml","ChatList.qml","ChatList.qml","ChatList.qml"
-    ]
+
 
     ColumnLayout {
         anchors.fill: leftNavBar

@@ -44,8 +44,8 @@ public:
      */
     enum Modules {
         REGISTERMOD = 0, ///< 注册模块
-        RESETMOD = 1,   ///< 重置密码模块
-        LOGINMOD = 2,   ///< 登录模块
+        RESETMOD = 1,    ///< 重置密码模块
+        LOGINMOD = 2,    ///< 登录模块
     };
     Q_ENUM(Modules) // 使枚举在QML中可用
 };

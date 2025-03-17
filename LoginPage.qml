@@ -131,7 +131,8 @@ Rectangle {
                     "user": usernameInput.text,
                     "passwd": passwordInput.text
                 }
-                HttpMgr.PostHttpReq("http://192.168.56.101:8080/user_login", json_obj, Global.ID_LOGIN_USER, Global.LOGINMOD)
+                loginPage.login()
+                // HttpMgr.PostHttpReq("http://192.168.56.101:8080/user_login", json_obj, Global.ID_LOGIN_USER, Global.LOGINMOD)
 
             }
         }

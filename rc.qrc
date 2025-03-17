@@ -12,5 +12,7 @@
         <file>src/images/folder_active.png</file>
         <file>src/images/search.png</file>
         <file>src/images/settings.png</file>
+        <file>src/images/adduser.png</file>
+        <file>src/images/folder_black.png</file>
     </qresource>
 </RCC>
