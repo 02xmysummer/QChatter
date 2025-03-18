@@ -3,15 +3,15 @@ import QtQuick
 
 Rectangle {
     id:rightManagedZone
-    property string thisQml: "ChatContent.qml"
+    property string thisQml: "ChatArea.qml"
 
     property string chatName: ""
-    ChatContent {
+    ChatArea {
         anchors.fill: parent
-        visible: thisQml === "ChatContent.qml"
+        visible: thisQml === "ChatArea.qml"
     }
-    UserInfo {
+    UserInfoArea {
         anchors.fill: parent
-        visible: thisQml === "UserInfo.qml"
+        visible: thisQml === "UserInfoArea.qml"
     }
 }

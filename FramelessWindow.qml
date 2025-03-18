@@ -45,6 +45,7 @@ FramelessWindow {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
+                    cursorShape: Qt.PointingHandCursor
                     Image {
                         id:img
                         source: "qrc:/src/images/pinTop.png"
@@ -78,6 +79,7 @@ FramelessWindow {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
+                    cursorShape: Qt.PointingHandCursor
                     Rectangle {
                         anchors.centerIn: parent
                         width: parent.width * 0.3
@@ -107,6 +109,7 @@ FramelessWindow {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
+                    cursorShape: Qt.PointingHandCursor
                     Rectangle {
                         anchors.centerIn: parent
                         width: parent.width * 0.3
@@ -138,11 +141,12 @@ FramelessWindow {
                 property bool isHoverd: false
                 width: 40
                 height: 30
-                color: isHoverd?  framelesswindow.hoverd_color : framelesswindow.defalt_color
+                color: isHoverd?  "#FB7373" : framelesswindow.defalt_color
                 visible: framelesswindow.quitBntShow
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
+                    cursorShape: Qt.PointingHandCursor
                     Rectangle {
                         anchors.centerIn: parent
                         width: parent.width * 0.3

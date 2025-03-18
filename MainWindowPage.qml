@@ -19,7 +19,7 @@ Rectangle {
         "ChatList.qml", "UserList.qml","ChatList.qml","ChatList.qml","ChatList.qml"
     ]
     property var rightList: [
-        "ChatContent.qml","UserInfo.qml","ChatContent.qml","ChatContent.qml","ChatContent.qml"
+        "ChatArea.qml","UserInfoArea.qml","ChatArea.qml","ChatArea.qml","ChatArea.qml"
     ]
     RowLayout {
         anchors.fill: main
@@ -48,7 +48,7 @@ Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
             color: "transparent"
-            thisQml:"ChatContent.qml"
+            thisQml:"ChatArea.qml"
 
         }
 

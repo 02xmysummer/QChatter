@@ -14,5 +14,8 @@
         <file>src/images/settings.png</file>
         <file>src/images/adduser.png</file>
         <file>src/images/folder_black.png</file>
+        <file>src/images/emoji.png</file>
+        <file>src/images/screenshot.png</file>
+        <file>src/images/hoverdscreenshot.png</file>
     </qresource>
 </RCC>

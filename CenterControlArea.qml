@@ -81,23 +81,5 @@ Rectangle {
             Layout.fillHeight: true
             visible: thisQml === "SearchList.qml"
         }
-
-        // Loader {
-        //     sourceComponent:chatList
-        //     Layout.fillWidth: true
-        //     Layout.fillHeight: true
-        //     onLoaded:switchSourceComponent(thisQml)
-
-        // }
     }
-
-    // function switchSourceComponent(qml){
-    //     if(qml === "ChatList.qml") {
-    //         chatList.visible = true
-    //         userList.visible = false
-    //     } else  if(qml === "UserList.qml") {
-    //         chatList.visible = false
-    //         userList.visible = true
-    //     }
-    // }
 }
