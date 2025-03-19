@@ -18,6 +18,7 @@ Rectangle {
             Layout.preferredWidth: icon_width
             Layout.preferredHeight: icon_width
             icon.source: "qrc:/src/images/avatar.jpg"
+            // icon.source: "file:\\D:\\code\\qt\\QChatter\\QChatter Files\\All User\\avatar.jpg"
             icon.width: icon_width
             icon.height: icon_width
             icon.color: "transparent"

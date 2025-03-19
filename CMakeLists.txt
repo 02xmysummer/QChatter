@@ -47,6 +47,8 @@ qt_add_qml_module(appQChatter
         framelesswindow.h
         framelesswindow.cpp
     RESOURCES rc.qrc
+    SOURCES usermgr.h usermgr.cpp
+    SOURCES chatmgr.h chatmgr.cpp
 
 )
 

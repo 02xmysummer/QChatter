@@ -25,7 +25,7 @@ Rectangle {
         Image {
             width: 30
             height: width
-            source: model.avatar || ""
+            source: ("file:\\" + model.avatar) || ""
             anchors.verticalCenter: parent.verticalCenter
         }
 
@@ -44,6 +44,7 @@ Rectangle {
         anchors.fill: parent
         hoverEnabled: true
         onClicked: {
+            console.log("clicked.............")
             chatListDelegate.clicked()
             p_object.avatar =  model.avatar
             p_object.name =  model.name

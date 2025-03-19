@@ -3,7 +3,8 @@ import QtQuick.Controls
 import QtQuick.Controls.Material
 import io.httpmgr 1.0
 import io.global 1.0
-
+import io.usermgr 1.0
+import io.chatmgr 1.0
 /******************************************************************************
  *
  * @file       LoginPage.qml
@@ -132,6 +133,9 @@ Rectangle {
                     "passwd": passwordInput.text
                 }
                 loginPage.login()
+                UserMgr.UpdateFriendList()
+                ChatMgr.UpdateChatList()
+
                 // HttpMgr.PostHttpReq("http://192.168.56.101:8080/user_login", json_obj, Global.ID_LOGIN_USER, Global.LOGINMOD)
 
             }

@@ -72,7 +72,3 @@ void HttpMgr::slot_http_finish(Global::ReqId id,
         emit sig_login_mod_finish(id, res, err);
     }
 }
-void HttpMgr::print()
-{
-    qDebug() << "print";
-}

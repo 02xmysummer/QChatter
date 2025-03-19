@@ -61,11 +61,6 @@ public:
                           Global::ErrorCodes err,
                           Global::Modules mod);
 
-    /**
-     * @brief 用于调试的打印函数
-     */
-    Q_INVOKABLE void print();
-
 signals:
     /**
      * @brief HTTP请求完成信号

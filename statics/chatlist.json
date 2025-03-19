@@ -1,0 +1,145 @@
+[
+    {
+        "uuid": "aB2c9D",
+        "avatar": "1.jpg",
+        "message":[
+            {
+                "isSelf": 1,
+                "text": "I'm fine, thank you.",
+                "time": "10:05"
+            },
+            {
+                "isSelf": 0,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+        ]
+    },
+    {
+        "uuid": "Kj8mN2pQ",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "I'm fine, thank you.",
+                "time": "10:05"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+
+        ]
+    },
+    {
+        "uuid": "x7YhV9",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "I'm fine, thank you.",
+                "time": "10:05"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+
+        ]
+    },
+    {
+        "uuid": "Zt5WqL8n",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "I'm fine, thank you.",
+                "time": "10:05"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+
+        ]
+    },
+    {
+        "uuid": "R4kP9mX",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "I'm fine, thank you.",
+                "time": "10:05"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+
+        ]
+    },
+    {
+        "uuid": "bN7cK2vM",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "time": "10:05"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+
+        ]
+    },
+    {
+        "uuid": "Hj6sQ9",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "yes, I'm fine, thank you.",
+                "time": "13:25"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+
+        ]
+    },
+    {
+        "uuid": "U3wF8nP",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "I'm fine, thank you.",
+                "time": "12:05"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+
+        ]
+    },
+    {
+        "uuid": "gT5mB9k",
+        "message":[
+            {
+                "isSelf": 0,
+                "text": "I'm fine, thank you.",
+                "time": "11:05"
+            },
+            {
+                "isSelf": 1,
+                "text": "Hello, how are you?",
+                "time": "10:00"
+            }
+        ]
+    }
+]

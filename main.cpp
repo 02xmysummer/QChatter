@@ -4,6 +4,8 @@
 #include "framelesswindow.h"
 #include "global.h"
 #include "httpmgr.h"
+#include "usermgr.h"
+#include "chatmgr.h"
 /**
  * @brief 程序入口函数
  * 
@@ -12,6 +14,7 @@
  */
 int main(int argc, char *argv[])
 {
+
     // 创建Qt GUI应用程序实例
     QGuiApplication app(argc, argv);
 
@@ -32,6 +35,25 @@ int main(int argc, char *argv[])
                                           return HttpMgr::GetInstance().get(); // 返回HttpMgr单例实例
                                       });
 
+    qmlRegisterSingletonType<UserMgr>("io.usermgr",
+                                      1,
+                                      0,
+                                      "UserMgr",
+                                      [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+                                          Q_UNUSED(engine)
+                                          Q_UNUSED(scriptEngine)
+                                          return UserMgr::GetInstance().get(); // 返回HttpMgr单例实例
+                                      });
+
+    qmlRegisterSingletonType<ChatMgr>("io.chatmgr",
+                                      1,
+                                      0,
+                                      "ChatMgr",
+                                      [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+                                          Q_UNUSED(engine)
+                                          Q_UNUSED(scriptEngine)
+                                          return ChatMgr::GetInstance().get(); // 返回HttpMgr单例实例
+                                      });
     // 注册Global类型到QML环境，使得枚举值可在QML中使用
     qmlRegisterType<Global>("io.global", 1, 0, "Global");
 

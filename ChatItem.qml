@@ -31,7 +31,7 @@ Rectangle {
         Image {
             width: 40
             height: width
-            source: model.avatar || ""
+            source: ("file:\\" + model.avatar) || ""
             anchors.verticalCenter: parent.verticalCenter
         }
 
@@ -51,7 +51,7 @@ Rectangle {
             }
 
             Text {
-                text: model.status || ""
+                text: model.lasttext || ""
                 font.pixelSize: 14
                 color: "#666666"
                 elide: Text.ElideRight
@@ -61,7 +61,7 @@ Rectangle {
 
         // 时间
         Text {
-            text: model.time || ""
+            text: model.lasttime || ""
             font.pixelSize: 12
             color: "#999999"
             anchors.top: parent.top
