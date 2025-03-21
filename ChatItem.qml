@@ -1,6 +1,7 @@
 import QtQuick
+import QtQuick.Controls
 import QtQuick.Layouts
-
+import io.chatmgr 1.0
 /******************************************************************************
  *
  * @file       ChatItem.qml
@@ -17,6 +18,9 @@ Rectangle {
 
     // 添加点击信号
     signal clicked()
+
+    signal moveTop()
+    signal remove()
     width: parent.width
     height: 60
     color: isActive ? "#C8C7C6" : (mouseArea.containsMouse ? "#DEDCDA" : "#E5E4E4")
@@ -31,7 +35,7 @@ Rectangle {
         Image {
             width: 40
             height: width
-            source: ("file:\\" + model.avatar) || ""
+            source: model.avatar || ""
             anchors.verticalCenter: parent.verticalCenter
         }
 
@@ -44,7 +48,6 @@ Rectangle {
             Text {
                 text: model.name || ""
                 font.pixelSize: 16
-                font.bold: true
                 color: "#000000"
                 elide: Text.ElideRight  // 文本过长时显示省略号
                 width: parent.width
@@ -73,9 +76,34 @@ Rectangle {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: {
-            chatListDelegate.clicked()  // 触发点击信号
-            p_object.chatName = model.name
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
+        onClicked: function(mouse){
+            if(mouse.button === Qt.LeftButton) {
+                chatListDelegate.clicked()  // 触发点击信号
+                p_object.chatName = model.name
+            } else {
+                contextMenu.popup()
+            }
+
+        }
+        Menu {
+            id: contextMenu
+
+            MenuItem {
+                text: qsTr("置顶")
+                onTriggered: {
+                    chatItem.moveTop()
+                }
+            }
+
+            MenuSeparator { }
+
+            MenuItem {
+                text: qsTr("删除消息")
+                onTriggered: {
+                    chatItem.remove()
+                }
+            }
         }
     }
 }

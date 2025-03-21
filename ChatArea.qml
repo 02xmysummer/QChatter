@@ -2,6 +2,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Controls.Material
+import io.usermgr 1.0
+import io.chatmgr 1.0
 /******************************************************************************
  *
  * @file       ChatArea.qml
@@ -11,10 +13,35 @@ import QtQuick.Controls.Material
  * @history
  *****************************************************************************/
 ColumnLayout {
+    id:chatArea
     anchors.fill: parent
     spacing: 0
 
     property string name: p_object.chatName
+
+    Connections {
+        target: ChatMgr
+        function onSig_get_chathistory_finish(res) {
+            var obj = JSON.parse(res)
+            chatContent.clearMessage()
+            if(obj.history.length === 0)
+                return;
+            var self = UserMgr.GetSelfInfo()
+            for(var i = obj.history.length - 1; i >= 0; i--) {
+                var item = obj.history[i]
+                if(item.isSelf) {
+                    chatContent.appendMessage(
+                                self.avatar, self.name, item.text, true
+                                )
+                }else {
+                    chatContent.appendMessage(
+                                obj.avatar, chatArea.name, item.text, false
+                                )
+                }
+            }
+        }
+    }
+
     Item {
         Layout.fillWidth: true
         height: 60

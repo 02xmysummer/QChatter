@@ -1,11 +1,20 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-
+import io.chatmgr 1.0
 Rectangle {
     id: leftNavBar
     property int currentIndex: 0
 
+
+    Connections {
+        target: ChatMgr
+        function onSig_create_chat_finish(res) {
+            listModel.get(currentIndex).active = false
+            listModel.get(0).active = true
+            currentIndex = 0
+        }
+    }
 
     ColumnLayout {
         anchors.fill: leftNavBar
@@ -37,6 +46,7 @@ Rectangle {
             Layout.preferredWidth: parent.width
             spacing: 5
             model: ListModel {
+                id:listModel
                 ListElement { icon: "chat"; active: true }
                 ListElement { icon: "contacts"; active: false }
                 ListElement { icon: "folder"; active: false }
@@ -68,7 +78,6 @@ Rectangle {
                             parent.ListView.view.model.setProperty(i, "active", i === index)
                         }
                         leftNavBar.currentIndex = index
-                        console.log("current index is",index)
                     }
                 }
             }

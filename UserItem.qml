@@ -1,5 +1,7 @@
 import QtQuick
+import QtQuick.Controls
 import QtQuick.Layouts
+import io.chatmgr 1.0
 /******************************************************************************
  *
  * @file       UserItem.qml
@@ -25,14 +27,13 @@ Rectangle {
         Image {
             width: 30
             height: width
-            source: ("file:\\" + model.avatar) || ""
+            source: model.avatar|| ""
             anchors.verticalCenter: parent.verticalCenter
         }
 
         Text {
             text: model.name || ""
             font.pixelSize: 14
-            font.bold: true
             color: "#000000"
             elide: Text.ElideRight  // 文本过长时显示省略号
             width: parent.width
@@ -43,13 +44,44 @@ Rectangle {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: {
-            console.log("clicked.............")
-            chatListDelegate.clicked()
-            p_object.avatar =  model.avatar
-            p_object.name =  model.name
-            p_object.uuid =  model.uuid
-            p_object.region =  model.region
+        acceptedButtons: Qt.LeftButton | Qt.RightButton  // 同时接受左键和右键
+        onClicked:function(mouse) {
+            if (mouse.button === Qt.LeftButton) {
+                chatListDelegate.clicked()
+                p_object.avatar =  model.avatar
+                p_object.name =  model.name
+                p_object.uuid =  model.uuid
+                p_object.region =  model.region
+            } else {
+                contextMenu.uuid = model.uuid
+                contextMenu.popup()
+            }
         }
+        Menu {
+            id: contextMenu
+            property string uuid: ""
+            MenuItem {
+                text: qsTr("发消息")
+                onTriggered: {
+                    if(uuid === "")
+                        return
+                    ChatMgr.CreateChat(uuid)
+                    uuid = ""
+                }
+            }
+
+            MenuSeparator { }
+
+            MenuItem {
+                text: qsTr("删除好友")
+                onTriggered: {
+                    // 处理删除逻辑
+                }
+            }
+        }
+
     }
+
+
+
 }

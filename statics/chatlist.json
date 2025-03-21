@@ -1,145 +1,82 @@
 [
     {
-        "uuid": "aB2c9D",
-        "avatar": "1.jpg",
-        "message":[
+        "history": [
+        ],
+        "uuid": "Kj8mN2pQ"
+    },
+    {
+        "history": [
+        ],
+        "uuid": "B3kT7gX"
+    },
+    {
+        "history": [
+        ],
+        "uuid": "Ws8kN3h"
+    },
+    {
+        "history": [
+        ],
+        "uuid": "gT5mB9k"
+    },
+    {
+        "history": [
             {
-                "isSelf": 1,
-                "text": "I'm fine, thank you.",
+                "isSelf": true,
+                "text": "你看过最新一集了吗？",
                 "time": "10:05"
             },
             {
-                "isSelf": 0,
-                "text": "Hello, how are you?",
+                "isSelf": false,
+                "text": "还没呢，剧情怎么样？",
                 "time": "10:00"
             }
-        ]
+        ],
+        "uuid": "R4kP9mX"
     },
     {
-        "uuid": "Kj8mN2pQ",
-        "message":[
+        "history": [
             {
-                "isSelf": 0,
-                "text": "I'm fine, thank you.",
+                "isSelf": true,
+                "text": "明天的会议资料准备好了吗？",
                 "time": "10:05"
             },
             {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
+                "isSelf": false,
+                "text": "已经发到你邮箱了",
                 "time": "10:00"
             }
-
-        ]
+        ],
+        "uuid": "bN7cK2vM"
     },
     {
-        "uuid": "x7YhV9",
-        "message":[
+        "history": [
             {
-                "isSelf": 0,
-                "text": "I'm fine, thank you.",
-                "time": "10:05"
-            },
-            {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
-                "time": "10:00"
-            }
-
-        ]
-    },
-    {
-        "uuid": "Zt5WqL8n",
-        "message":[
-            {
-                "isSelf": 0,
-                "text": "I'm fine, thank you.",
-                "time": "10:05"
-            },
-            {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
-                "time": "10:00"
-            }
-
-        ]
-    },
-    {
-        "uuid": "R4kP9mX",
-        "message":[
-            {
-                "isSelf": 0,
-                "text": "I'm fine, thank you.",
-                "time": "10:05"
-            },
-            {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
-                "time": "10:00"
-            }
-
-        ]
-    },
-    {
-        "uuid": "bN7cK2vM",
-        "message":[
-            {
-                "isSelf": 0,
-                "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-                "time": "10:05"
-            },
-            {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
-                "time": "10:00"
-            }
-
-        ]
-    },
-    {
-        "uuid": "Hj6sQ9",
-        "message":[
-            {
-                "isSelf": 0,
-                "text": "yes, I'm fine, thank you.",
+                "isSelf": true,
+                "text": "新餐厅的菜品还不错",
                 "time": "13:25"
             },
             {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
+                "isSelf": false,
+                "text": "下次一起去尝尝",
                 "time": "10:00"
             }
-
-        ]
+        ],
+        "uuid": "Hj6sQ9"
     },
     {
-        "uuid": "U3wF8nP",
-        "message":[
+        "history": [
             {
-                "isSelf": 0,
-                "text": "I'm fine, thank you.",
+                "isSelf": true,
+                "text": "假期有什么安排吗？",
                 "time": "12:05"
             },
             {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
+                "isSelf": false,
+                "text": "准备去海边玩几天",
                 "time": "10:00"
             }
-
-        ]
-    },
-    {
-        "uuid": "gT5mB9k",
-        "message":[
-            {
-                "isSelf": 0,
-                "text": "I'm fine, thank you.",
-                "time": "11:05"
-            },
-            {
-                "isSelf": 1,
-                "text": "Hello, how are you?",
-                "time": "10:00"
-            }
-        ]
+        ],
+        "uuid": "U3wF8nP"
     }
 ]

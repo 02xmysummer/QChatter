@@ -1,11 +1,11 @@
 #include <QGuiApplication>
 #include <QIcon>
 #include <QQmlApplicationEngine>
+#include "chatmgr.h"
 #include "framelesswindow.h"
 #include "global.h"
 #include "httpmgr.h"
 #include "usermgr.h"
-#include "chatmgr.h"
 /**
  * @brief 程序入口函数
  * 
@@ -14,7 +14,6 @@
  */
 int main(int argc, char *argv[])
 {
-
     // 创建Qt GUI应用程序实例
     QGuiApplication app(argc, argv);
 

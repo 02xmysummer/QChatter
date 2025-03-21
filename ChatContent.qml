@@ -48,6 +48,8 @@ Rectangle {
         })
         messageList.positionViewAtEnd()
     }
-
+    function clearMessage() {
+        messageModel.clear()
+    }
 }
 

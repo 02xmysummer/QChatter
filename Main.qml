@@ -20,6 +20,7 @@ FramelessWindow {
             loader.item.height = height
         }
     }
+
     Loader {
         id: loader
         y: 30
